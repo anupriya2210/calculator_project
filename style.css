@@ -1,0 +1,99 @@
+/* Calculator Container */
+.calculator {
+    width: 30vw;
+    height: 70vh;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #a7ffeb, #81d4fa);
+    animation: backgroundAnimation 10s infinite alternate;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #00bcd4, #8e24aa, #ff4081) 1;
+}
+
+/* Background Color Animation */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(145deg, #a7ffeb, #81d4fa);
+    }
+    50% {
+        background: linear-gradient(145deg, #81d4fa, #a7ffeb);
+    }
+    100% {
+        background: linear-gradient(145deg, #a7ffeb, #80deea);
+    }
+}
+
+.calculator>.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+/* Button Styles */
+.calculator>.form-group>button {
+    width: 25%;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+/* Number buttons */
+.calculator>.form-group>.number {
+    background-color: #42a5f5;
+    color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.calculator>.form-group>.number:hover {
+    background-color: #2196f3;
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.6);
+    transform: scale(1.1);
+}
+
+/* Operator buttons */
+.calculator>.form-group>.operator {
+    background-color: #ff7043;
+    color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.calculator>.form-group>.operator:hover {
+    background-color: #f4511e;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.6);
+    transform: scale(1.1);
+}
+
+/* Evaluate button */
+.evaluate {
+    background-color: #bb6fc9;
+    color:black;
+    font-size: 25px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.evaluate:hover {
+    background-color: #7b1fa2; 
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.7);
+    transform: scale(1.15);
+}
+
+.calculator>.form-group>input {
+    width: 100%;
+    font-size: 30px;
+    text-align: right;
+    border-radius: 10px;
+    padding-right: 10px;
+    border: 2px solid #ccc;
+    background: #ffffff;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
